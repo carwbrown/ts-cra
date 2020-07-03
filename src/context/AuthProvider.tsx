@@ -1,13 +1,12 @@
 import React from "react";
 
-const sleep = (time: number) =>
-  new Promise((resolve) => setTimeout(resolve, time));
+// const sleep = (time: number) => new Promise((resolve) => setTimeout(resolve, time));
 
-const getUser = () => sleep(1000).then(() => ({ username: "elmo" }));
+// const getUser = () => sleep(1000).then(() => ({ username: "elmo" }));
 
 export const AuthContext = React.createContext(null);
 export function AuthProvider({ children }: any) {
-  const [state, setState] = React.useState({
+  const [state] = React.useState({
     status: "success",
     error: null as any,
     user: null as any,
@@ -15,7 +14,15 @@ export function AuthProvider({ children }: any) {
 
   // TODO: sign in
   // set clear values status to pending
-  // on success
+  // on success set success and values. set in localstorage
+  // on error show error card
+
+  // TODO: sign out
+  // set back to default values
+  // clear localstorage
+
+  // TODO: on first load pull from localStorage
+
   /*
   React.useEffect(() => {
     getUser().then(
