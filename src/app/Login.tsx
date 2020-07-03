@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import { AuthContext } from "../hooks/authContext";
 import { Container, TextField, Button, Grid } from "@material-ui/core";
 
 const defaultFormState = {
@@ -8,8 +7,6 @@ const defaultFormState = {
 };
 
 const Login = () => {
-  const auth = useContext(AuthContext);
-
   const [formState, setFormState] = useState(defaultFormState);
 
   const handleForm = (e: any, field: string) => {
@@ -21,7 +18,7 @@ const Login = () => {
   };
 
   const handleSubmit = (e: any) => {
-    auth?.signIn(formState.email, formState.password);
+    console.log(formState.email, formState.password);
   };
 
   return (
