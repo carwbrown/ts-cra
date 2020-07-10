@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Container, TextField, Button, Grid } from "@material-ui/core";
 
+import useAuth from "../hooks/useAuth";
+
 const defaultFormState = {
   email: "",
   password: "",
@@ -8,6 +10,7 @@ const defaultFormState = {
 
 const Login = () => {
   const [formState, setFormState] = useState(defaultFormState);
+  const { login, errors } = useAuth();
 
   const handleForm = (e: any, field: string) => {
     e.preventDefault();
@@ -19,6 +22,7 @@ const Login = () => {
 
   const handleSubmit = (e: any) => {
     console.log(formState.email, formState.password);
+    login(formState.email, formState.password);
   };
 
   return (
