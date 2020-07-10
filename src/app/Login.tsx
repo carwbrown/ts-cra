@@ -65,6 +65,7 @@ const Login = () => {
             Login
           </Button>
         </Grid>
+        {errors && <div>{errors}</div>}
       </Grid>
     </Container>
   );
