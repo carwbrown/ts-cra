@@ -16,7 +16,9 @@ const useAuth = () => {
       setErrors(null);
       push("/");
     } else {
-      setErrors("Not a valid user");
+      setErrors(
+        "Not a valid user. Try email // password: test@email.com // testtest",
+      );
       localStorage.removeItem("token");
       setUserState(null);
     }
