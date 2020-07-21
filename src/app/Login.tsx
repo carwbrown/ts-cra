@@ -26,7 +26,6 @@ const Login = () => {
 
   return (
     <Container>
-      <h1>Login</h1>
       <Grid
         container
         direction="column"
