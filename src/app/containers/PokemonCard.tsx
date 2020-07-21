@@ -54,10 +54,7 @@ const PokemonCard = ({ name }: any) => {
   if (loading) {
     return <div>Loading mon...</div>;
   }
-  console.log("mon: ", mon);
 
-  //mon.sprites.front_default
-  console.log("mon: ", mon);
   if (errors) {
     return (
       <Card className={classes.root} variant="outlined">

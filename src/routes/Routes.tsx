@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Heroes from "../app/containers/Heroes";
 import Pokemon from "../app/containers/Pokemon";
+import FruitCounter from "../app/containers/FruitCounter";
 import Login from "../app/Login";
 import ProtectedRoute from "./ProtectedRoute";
 
@@ -15,6 +16,9 @@ const Routes = () => {
       </ProtectedRoute>
       <ProtectedRoute path="/pokemon" exact>
         <Pokemon />
+      </ProtectedRoute>
+      <ProtectedRoute path="/fruit" exact>
+        <FruitCounter />
       </ProtectedRoute>
     </Switch>
   );

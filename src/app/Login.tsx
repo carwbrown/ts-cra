@@ -21,7 +21,6 @@ const Login = () => {
   };
 
   const handleSubmit = (e: any) => {
-    console.log(formState.email, formState.password);
     login(formState.email, formState.password);
   };
 

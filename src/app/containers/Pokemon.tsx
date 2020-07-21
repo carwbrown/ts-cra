@@ -14,7 +14,6 @@ const fetchPokemon = async (offset = 20, limit = 20) => {
     `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`,
   );
   const getPokemonData = await pokemonDataRes.json();
-  console.log("getPokemonData: ", getPokemonData.results);
 
   return getPokemonData.results;
 };

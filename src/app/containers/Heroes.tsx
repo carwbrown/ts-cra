@@ -23,7 +23,6 @@ interface IResponse {
 const fetchHeroes = async () => {
   const heroDataRes = await fetch(`https://hotsapi.net/api/v1/heroes`);
   const getHeroData = await heroDataRes.json();
-  console.log("getHeroData: ", getHeroData);
   return { result: getHeroData, error: undefined };
 };
 
